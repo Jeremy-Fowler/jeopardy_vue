@@ -10,6 +10,9 @@
       Made with 💖 by CodeWorks
     </div>
   </footer>
+  <Modal id="clue-modal">
+    <ClueDetails />
+  </Modal>
 </template>
 
 <script>

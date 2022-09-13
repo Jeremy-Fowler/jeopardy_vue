@@ -1,10 +1,10 @@
 <template>
   <div class="container-fluid">
-      <div class="row">
-        <div v-for="c in clues" :key="c.id" class="col-md-3 p-2">
-          <ClueCard :clue="c"/>
-        </div>
+    <div class="row">
+      <div v-for="c in clues" :key="c.id" class="col-md-3 p-2">
+        <ClueCard :clue="c" />
       </div>
+    </div>
   </div>
 </template>
 
@@ -18,8 +18,8 @@ import { AppState } from '../AppState.js';
 
 export default {
   name: 'Home',
-  setup(){
-    onMounted(async()=>{
+  setup() {
+    onMounted(async () => {
       try {
         await cluesService.getClues()
       } catch (error) {
@@ -27,8 +27,8 @@ export default {
         Pop.error(error.message)
       }
     })
-    return{
-      clues: computed(()=> AppState.clues)
+    return {
+      clues: computed(() => AppState.clues)
     }
   }
 }
