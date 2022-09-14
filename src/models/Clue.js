@@ -5,5 +5,6 @@ export class Clue {
     this.question = data.question
     this.points = data.value
     this.answer = data.answer
+    this.answered = false
   }
 }
