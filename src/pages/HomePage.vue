@@ -19,12 +19,19 @@ import { AppState } from '../AppState.js';
 export default {
   name: 'Home',
   setup() {
-    onMounted(async () => {
+    async function getClues() {
       try {
         await cluesService.getClues()
       } catch (error) {
         logger.error(error)
         Pop.error(error.message)
+      }
+    }
+
+    onMounted(() => {
+      let clues = AppState.clues
+      if (clues.length == 0 || clues.length == clues.filter(c => c.answered).length) {
+        getClues()
       }
     })
     return {

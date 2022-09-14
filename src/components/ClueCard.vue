@@ -1,13 +1,15 @@
 <template>
-  <div v-if="!clue.answered" class="bg-primary selectable h-100 py-2 text-center" data-bs-target="#clue-modal"
-    :data-bs-toggle="clue.answered ? '' : 'modal'" @click="setActiveClue">
-    <h2 class="text-light">
-      {{clue.category}}
-    </h2>
-    <h2 class="text-warning">
-      {{clue.points}}
-    </h2>
-  </div>
+  <router-link @click="setActiveClue()" :to="{name: 'Clue', params: {id: clue.id}}" v-if="!clue.answered">
+    <div class="bg-primary selectable h-100 py-2 text-center">
+      <h2 class="text-light">
+        {{clue.category}}
+      </h2>
+      <h2 class="text-warning">
+        {{clue.points}}
+      </h2>
+
+    </div>
+  </router-link>
   <div v-else class="bg-danger h-100 py-2 text-center">
     <h2 class="text-light">
       {{clue.category}}

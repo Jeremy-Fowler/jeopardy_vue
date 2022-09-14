@@ -6,8 +6,12 @@
     <router-view />
   </main>
   <footer>
-    <div class="bg-dark text-light text-center p-4">
-      Made with 💖 by CodeWorks
+    <div class="container-fluid">
+      <div class="row">
+        <div v-for="p in players" :key="p.name" class="col-3">
+          <PlayerCard :player="p" />
+        </div>
+      </div>
     </div>
   </footer>
   <Modal id="clue-modal">
@@ -23,7 +27,8 @@ export default {
   name: 'App',
   setup() {
     return {
-      appState: computed(() => AppState)
+      appState: computed(() => AppState),
+      players: computed(() => AppState.players)
     }
   }
 }

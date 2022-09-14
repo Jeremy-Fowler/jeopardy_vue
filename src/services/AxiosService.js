@@ -7,5 +7,6 @@ export const api = Axios.create({
 
 export const jeopardyApi = new Axios.create({
   baseURL: 'https://jservice.io',
-  timeout: 4000
+  timeout: 4000,
+  params: { count: 16 }
 })

@@ -10,5 +10,24 @@ export const AppState = reactive({
   clues: [],
 
   /**@type {import('./models/Clue.js').Clue} */
-  clue: null
+  clue: null,
+
+  players: [
+    {
+      name: 'Mick',
+      points: 0
+    },
+    {
+      name: 'Jerms',
+      points: 0
+    },
+    {
+      name: 'Jake',
+      points: 0
+    },
+    {
+      name: 'Sam',
+      points: 0
+    },
+  ]
 })
