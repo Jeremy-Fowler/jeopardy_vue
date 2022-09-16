@@ -1,22 +1,16 @@
 <template>
   <header>
-    <Navbar />
   </header>
-  <main class="bg-dark">
+  <main class="bg-dark container-fluid pt-5">
     <router-view />
   </main>
-  <footer class="bg-dark">
-    <div class="container-fluid">
-      <div class="row">
-        <div v-for="p in players" :key="p.name" class="col-3">
-          <PlayerCard :player="p" />
-        </div>
+  <footer class="container-fluid bg-dark">
+    <div class="row">
+      <div v-for="p in players" :key="p.name" class="col-3">
+        <PlayerCard :player="p" />
       </div>
     </div>
   </footer>
-  <Modal id="clue-modal">
-    <ClueDetails />
-  </Modal>
 </template>
 
 <script>

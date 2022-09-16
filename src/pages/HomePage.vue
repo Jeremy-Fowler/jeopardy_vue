@@ -1,11 +1,11 @@
 <template>
-  <div class="container-fluid">
-    <div class="row">
-      <div v-for="c in clues" :key="c.id" class="col-md-3 p-2">
-        <ClueCard :clue="c" />
-      </div>
+
+  <div class="row">
+    <div v-for="c in clues" :key="c.id" class="col-md-3 p-2">
+      <ClueCard :clue="c" />
     </div>
   </div>
+
 </template>
 
 <script>

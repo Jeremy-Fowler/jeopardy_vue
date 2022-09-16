@@ -8,6 +8,10 @@ class CluesService {
     console.log(res.data);
     AppState.clues = res.data.map(c => new Clue(c))
   }
+
+  async getClue() {
+
+  }
 }
 
 export const cluesService = new CluesService()
