@@ -1,6 +1,6 @@
 <template>
-  <div class="text-center">
-    <h3 :class="`bg-primary p-3 ${player.points < 0 ? 'text-danger' : ''}`">
+  <div class="text-center" :id="'score-' + player.name">
+    <h3 @click="openMenu" :class="`selectable bg-primary p-3 ${player.points < 0 ? 'text-danger' : ''}`">
       ${{player.points}}
     </h3>
     <h3 class="bg-primary indie-flower p-3">
@@ -11,6 +11,7 @@
 
 
 <script>
+import { createPopper } from '@popperjs/core';
 import { watchEffect } from 'vue';
 import { useRoute } from 'vue-router';
 
@@ -20,12 +21,10 @@ export default {
       type: Object, required: true
     }
   },
-  setup() {
+  setup(props) {
     const route = useRoute()
-    watchEffect(() => {
-    })
     return {
-      route
+      route,
     }
   }
 }
