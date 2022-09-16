@@ -1,11 +1,9 @@
 <template>
-
   <div class="row">
     <div v-for="c in clues" :key="c.id" class="col-md-3 p-2">
       <ClueCard :clue="c" />
     </div>
   </div>
-
 </template>
 
 <script>
@@ -30,7 +28,11 @@ export default {
 
     onMounted(() => {
       let clues = AppState.clues
-      if (clues.length == 0 || clues.length == clues.filter(c => c.answered).length) {
+      if (clues.length == 0) {
+        getClues()
+      }
+      if (clues.length == clues.filter(c => c.answered).length) {
+        AppState.doubleJeopardy = true
         getClues()
       }
     })

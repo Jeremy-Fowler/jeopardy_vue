@@ -29,5 +29,7 @@ export const AppState = reactive({
       name: 'Sam',
       points: 0
     },
-  ]
+  ],
+
+  doubleJeopardy: false
 })
