@@ -1,8 +1,8 @@
 <template>
   <div v-if="clue" class="row bg-primary border border-5 border-dark justify-content-center align-items-center">
     <div class="col-12 text-center">
-      <p class="mb-5 category">{{clue.category}}</p>
-      <h1>{{clue.question}}</h1>
+      <p class="mb-5 category clue-text">{{clue.category}}</p>
+      <h1 class="clue-text">{{clue.question}}</h1>
       <div class="mt-5">
         <button @click="clue.answered = true" :class="{'d-none' : clue.answered}" class="clue-btn p-2 fw-bold">
           REVEAL ANSWER
@@ -50,8 +50,13 @@ export default {
   font-weight: bold;
 }
 
+.clue-text{
+  text-shadow: 2pt 2pt black;
+}
+
 .answer {
   font-size: 24pt;
+  text-shadow: 2pt 2pt black, 0 0 15pt #dac585;
 }
 
 .clue-btn{
