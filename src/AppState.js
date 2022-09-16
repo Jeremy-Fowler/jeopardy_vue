@@ -15,19 +15,23 @@ export const AppState = reactive({
   players: [
     {
       name: 'Mick',
-      points: 0
+      points: 0,
+      guessed: false
     },
     {
       name: 'Jerms',
-      points: 0
+      points: 0,
+      guessed: false
     },
     {
       name: 'Jake',
-      points: 0
+      points: 0,
+      guessed: false
     },
     {
       name: 'Sam',
-      points: 0
+      points: 0,
+      guessed: false
     },
   ],
 

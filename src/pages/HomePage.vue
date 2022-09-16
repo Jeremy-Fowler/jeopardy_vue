@@ -31,10 +31,11 @@ export default {
       if (clues.length == 0) {
         getClues()
       }
-      if (clues.length == clues.filter(c => c.answered).length) {
+      else if (clues.length == clues.filter(c => c.answered).length) {
         AppState.doubleJeopardy = true
         getClues()
       }
+      AppState.players.forEach(p => p.guessed = false)
     })
     return {
       clues: computed(() => AppState.clues)
@@ -44,5 +45,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+* {
+  font-family: Helvetica;
+}
 </style>

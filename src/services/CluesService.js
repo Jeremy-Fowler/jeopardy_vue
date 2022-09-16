@@ -9,9 +9,10 @@ class CluesService {
     AppState.clues = res.data.map(c => new Clue(c))
   }
 
-  async getClue() {
-
+  answerClue() {
+    AppState.clue.answered = true
   }
+
 }
 
 export const cluesService = new CluesService()
