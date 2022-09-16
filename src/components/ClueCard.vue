@@ -5,9 +5,8 @@
         {{clue.category}}
       </h2>
       <h2 class="text-warning">
-        {{clue.points}}
+        ${{clue.points}}
       </h2>
-
     </div>
   </router-link>
   <div v-else class="bg-danger h-100 py-2 text-center">
@@ -15,7 +14,7 @@
       {{clue.category}}
     </h2>
     <h2 class="text-warning">
-      {{clue.points}}
+      ${{clue.points}}
     </h2>
   </div>
 </template>

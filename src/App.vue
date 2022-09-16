@@ -2,10 +2,10 @@
   <header>
     <Navbar />
   </header>
-  <main>
+  <main class="bg-dark">
     <router-view />
   </main>
-  <footer>
+  <footer class="bg-dark">
     <div class="container-fluid">
       <div class="row">
         <div v-for="p in players" :key="p.name" class="col-3">
