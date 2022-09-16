@@ -7,7 +7,7 @@
         <button @click="clue.answered = true" :class="{'d-none' : clue.answered}" class="clue-btn p-2 fw-bold">
           REVEAL ANSWER
         </button>
-        <p class="answer" v-if="clue.answered">{{clue.answer}}</p>
+        <p class="answer text-warning fw-bold" v-if="clue.answered">{{clue.answer}}</p>
       </div>
     </div>
   </div>
@@ -59,7 +59,7 @@ export default {
   border: .1em solid black;
   border-radius: .1em ;
   //REVIEW white or yellow text here??
-  color: #ffc000;
+  color: white;
   outline: .1em solid white;
   box-shadow: 4px 5px 4px black;
 }
