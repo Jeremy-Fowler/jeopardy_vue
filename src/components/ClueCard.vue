@@ -1,5 +1,5 @@
 <template>
-  <router-link @click="setActiveClue()" :to="{name: 'Clue', params: {id: clue.id}}" v-if="!clue.answered">
+  <router-link @click="setActiveClue()" :to="{name: 'Clue'}" v-if="!clue.answered">
     <div
       class="bg-primary selectable h-100 py-2 d-flex flex-column align-items-center justify-content-between text-center">
       <h2 class="text-light category">
