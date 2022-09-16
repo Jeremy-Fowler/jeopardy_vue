@@ -4,8 +4,8 @@
       <p class="mb-5 category">{{clue.category}}</p>
       <h1>{{clue.question}}</h1>
       <div class="mt-5">
-        <button @click="clue.answered = true" :class="{'d-none' : clue.answered}">
-          Reveal Answer
+        <button @click="clue.answered = true" :class="{'d-none' : clue.answered}" class="clue-btn p-2 fw-bold">
+          REVEAL ANSWER
         </button>
         <p class="answer" v-if="clue.answered">{{clue.answer}}</p>
       </div>
@@ -52,6 +52,15 @@ export default {
 
 .answer {
   font-size: 24pt;
+}
 
+.clue-btn{
+  background-color: #060ce9;
+  border: .1em solid black;
+  border-radius: .1em ;
+  //REVIEW white or yellow text here??
+  color: #ffc000;
+  outline: .1em solid white;
+  box-shadow: 4px 5px 4px black;
 }
 </style>
