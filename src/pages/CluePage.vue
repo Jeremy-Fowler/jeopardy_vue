@@ -7,7 +7,7 @@
         <button @click="answerClue" :class="{'d-none' : clue.answered}" class="clue-btn p-2 fw-bold">
           REVEAL ANSWER
         </button>
-        <p class="answer text-warning fw-bold" v-if="clue.answered">{{clue.answer}}</p>
+        <p class="answer text-warning fw-bold" v-if="clue.answered" v-html="clue.answer"></p>
       </div>
     </div>
   </div>

@@ -24,7 +24,7 @@ export const AppState = reactive({
       guessed: false
     },
     {
-      name: 'Jake',
+      name: 'Tyler',
       points: 0,
       guessed: false
     },
